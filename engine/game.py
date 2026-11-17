@@ -56,7 +56,7 @@ class Game:
             self.enter((next(iter(self.where)), 0), "left")
         else:
             self.state = "title"
-            self.enter((1, self.count[1] - 1), "right")       # at the security desk
+            self.enter((1, self.count[1] - 1), "left")        # at the security desk, its left side: security is between you and the East elevator
             self.state = "title"
 
     def say(self, text, seconds=2.0):
