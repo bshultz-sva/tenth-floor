@@ -17,7 +17,7 @@ import random
 import pygame
 
 from engine import config as C
-from engine.kit import CeilingLight, Poster, Sign, Window
+from engine.kit import CeilingLight, Poster, ShockBot, Sign, Window
 from engine.kit._base import KitFurniture, shade
 from engine.room import Furniture, Lift, Platform, Room
 
@@ -459,6 +459,7 @@ class LifeDrawing(StudioRoom):
                            StudioEasel(690, 340, seed=6), SupplyCabinet(780, 340, "flat files", seed=7, h=80),
                            StudioEasel(700, C.FLOOR_Y, seed=8)]
         self.hazards.append(ArtTeacher(560, C.FLOOR_Y, left=120, right=850, speed=70, chase=155, seed=2))
+        self.hazards.append(ShockBot(600, C.FLOOR_Y, left=450, right=860))     # jump its bolt, or get up on the stand
 
 
 class CharcoalStudio(StudioRoom):
